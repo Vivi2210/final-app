@@ -20,8 +20,8 @@ function App() {
 
   const guardarDatos = async () => {
     const nuevaTarea = {
-      title: "nuueva tarrea",
-      description: "hacer la tarerra de desarrlollo",
+      title: "nueva tarrea",
+      description: "hacer de desarrlollo",
       studentId: "123456",
       createdAt: serverTimestamp(),
       updatedAt: serverTimestamp()
@@ -59,7 +59,7 @@ function App() {
         {data.map((item) => (
           <li key={item.id}>
             <strong>{item.title}</strong><br />
-            {item.description && <em>{item.description}</em>}<br />
+            {item.description && <span>{item.description}</span>}
             <button onClick={() => actualizarDatos(item.id)}>Actualizar</button>
             <button onClick={() => eliminarDatos(item.id)}>Eliminar</button>
           </li>
